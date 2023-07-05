@@ -1,0 +1,97 @@
+.footer{
+  &__foot{
+    background-color: rgba(241, 240, 255, 1);
+    color: rgba(146, 146, 160, 1);
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    height: 62px;
+    .separator{
+      margin: 0 8px;
+      border: 1px solid rgba(146, 146, 160, 1);
+    }
+  }
+  &__container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: rgba(231, 230, 246, 1);
+    padding-left: 16px;
+    padding-top: 32px;
+    padding-bottom: 24px;
+    &__logo1{
+      padding-bottom: 48px;
+      img{
+        width: 180px;
+        height: 57px;
+      }
+    }
+    &__texts{
+      color: rgba(24, 24, 35, 1);
+      &__title{
+        padding-bottom: 16px;
+        font-size: 18px;
+      }
+      &__group{
+        display: grid;
+        grid-gap: 8px;
+        padding-bottom: 24px;
+      }
+    }
+    &__follow{
+      display: flex;
+      flex-direction: column;
+      max-width: 190px;
+      width: 100%;
+      padding-bottom: 64px;
+      &__title{
+        font-size: 18px;
+        padding-bottom: 16px;
+      }
+      &__icons{
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .footer{
+    &__foot{
+      padding-left: 72px;
+    }
+    &__container{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      padding-top: 56px;
+      padding-right: 5%;
+      &__logo1{
+        padding-left: 40px;
+        top: 78px;
+        position: relative;
+        img{
+          width: 299px;
+          height: 96px;
+        }
+      }
+      &__texts{
+        grid-column: 2 / 2;
+        grid-row: 1;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        &__title{
+          grid-row: 1;
+        }
+        &__group{
+          align-content: flex-start;
+        }
+      }
+      &__follow{
+        grid-column: 2 / 2;
+        grid-row: 2;
+        padding-left: 66.5%;
+      }
+    }
+  }
+}

@@ -1,0 +1,104 @@
+.offers{
+  padding: 0 16px;
+  &__title{
+    font-size: 28px;
+    color: rgba(24, 24, 35, 1);
+    padding-top: 32px;
+    padding-bottom: 16px;
+  }
+  &__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__card{
+      background-image: url('../../assets/imgs/sombreado.jpg');
+      position: relative;
+      max-width: 600px;
+      height: 258px;
+      border-radius: 16px;
+      margin-bottom: 16px;
+      overflow: hidden;
+      &__block1{
+        background-image: url('../../assets/imgs/chicago.jpg');
+      }
+      &__block2{
+        background-image: url('../../assets/imgs/porto.jpg');
+      }
+      &__block3{
+        background-image: url('../../assets/imgs/chicago2.jpg');
+      }
+    }
+
+  }
+}
+
+
+.shading{
+  background-image: url('../../assets/imgs/sombreado.jpg');
+  max-width: 600px;
+  width: 96vw;
+  height: 500px;
+  position: relative;
+  top: -273px;
+  opacity: 0.3;
+  transform: rotate(4deg);
+  border-radius: 100% 0% 0% 100%/89% 69% 0% 0%;
+}
+.title__blocks, .description__blocks{
+  z-index: 100;
+  color: white;
+  padding-right: 16px;
+}
+
+.title__blocks{
+  font-size: 28px;
+  padding-bottom: 8px;
+}
+
+.description__blocks{
+  font-size: 20px;
+  padding-bottom: 24px;
+}
+
+.blocks{
+  background-size: cover;
+  max-width: 600px;
+  width: 96vw;
+  height: 258px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.blocks::after{
+  filter: brightness(0.65);
+  z-index: 1000;
+}
+
+@media screen and (min-width: 800px) {
+  .offers{
+    max-width: 1440px;
+    padding: 0px 16px 0px 0px;
+    &__container{
+      display: grid;
+      grid-template-columns: 25% 50% 25%;
+      grid-gap: 8px;
+      justify-items: center;
+      &__card{
+        width: 100%;
+      }
+    }
+  }
+
+  .shading{
+    width: 100vw;
+    height: 398px;
+  }
+
+  .blocks{
+    width: 100%;
+  }
+}
+

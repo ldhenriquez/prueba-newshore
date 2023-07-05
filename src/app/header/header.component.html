@@ -1,0 +1,31 @@
+<div class="header">
+  <img *ngIf="isMenuMobile"  class="header__iconMenu" src="../../assets/icons/menu.svg" alt="menu" (click)="menu()">
+  <img *ngIf="!isMenuMobile" class="header__iconMenu" src="../../assets/icons/close.svg" alt="menu" (click)="menu()">
+  <div class="header__logo1 " >
+    <img src="../../assets/icons/logo1.svg" alt="logo">
+  </div>
+  <div class="header__menu">
+    <p class="padding__r__32">Check-in</p>
+    <p class="padding__r__32">Manage my booking</p>
+    <div class="tooltip">
+      <p>Information</p>
+      <div class="tooltiptext">
+        <div class="tooltiptext__texts">
+          <p class="padding__b__8">Help center</p>
+          <p class="padding__b__8">Flight state</p>
+          <p class="padding__b__8">Airplanes</p>
+          <p>Routes</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header__lenguage">
+    <img class="header__lenguage__img" src="../../assets/icons/lenguage.svg" alt="lenguage">
+    <p class="header__lenguage__text" >English</p>
+  </div>
+</div>
+
+
+
+
+

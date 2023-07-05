@@ -1,0 +1,89 @@
+.header{
+  background: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 12px 18px;
+  &__lenguage{
+    &__text{
+      display: none;
+    }
+  }
+  &__menu{
+    display: none;
+  }
+}
+
+
+@media screen and (min-width: 800px) {
+  .header{
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    &__logo1{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &__iconMenu{
+      display: none;
+    }
+    &__menu{
+      display: flex;
+      color: rgba(24, 24, 35, 1);
+    }
+    &__lenguage{
+      display: flex;
+      justify-content: flex-end;
+      color: rgba(24, 24, 35, 1);
+      &__img{
+        padding-right: 4px;
+      }
+      &__text{
+        display: block ;
+      }
+    }
+  }
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 250px;
+  height: 171px;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 4px 4px 16px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 180%;
+  left: -32%;
+  margin-left: -60px;
+}
+
+.tooltiptext{
+  &__texts{
+    padding: 32px 24px;
+    color: rgba(24, 24, 35, 1);
+  }
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 12px;
+  border-style: solid;
+  border-color: transparent transparent rgba(255, 255, 255, 1) transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+

@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+
+h1, h2, h3, p, span {
+  font-family: roboto;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  margin: 0;
+}
+
+.padding__r__32{
+  padding-right: 32px;
+}
+
+.padding__b__8{
+  padding-bottom: 8px;
+}
+
+.padding__b__40{
+  padding-bottom: 2.5rem;
+}
+
+.bold{
+  font-weight: bold;
+}
